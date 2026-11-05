@@ -1,0 +1,135 @@
+:root {
+  /* Color and font definitions for easy adjustments */
+  --bg-color: #000000;
+  --card-bg: rgba(26, 26, 26, 0.95); /* Dark gray with 95% opacity */
+  --main-text-color: #ffffff;
+  --red-accent: #e60000; /* Deep red for title/icons */
+  --brighter-red-accent: #ff4d4d; /* Brighter red for 'ii' bars */
+  --card-shadow: 0 10px 30px rgba(0,0,0,0.7); /* Soft external shadow */
+  --font-digital: 'Press Start 2P', cursive; /* Used for title text */
+  --font-mono: 'Share Tech Mono', monospace; /* Used for body text */
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--bg-color);
+  /* Replace 'musician_bg.jpg' with the actual filename of your image */
+  background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('musician_bg.jpg');
+  background-size: cover;
+  background-position: center;
+  color: var(--main-text-color);
+  font-family: var(--font-mono);
+  overflow: hidden; /* Prevent scrolling */
+}
+
+/* Background image blurring *behind* the card */
+.outer-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: inherit;
+  background-size: inherit;
+  background-position: inherit;
+  filter: blur(5px) grayscale(100%); /* Adjust blur (0-10px) and remove color */
+  opacity: 0.6; /* Slight fade */
+  z-index: -1;
+}
+
+.card {
+  position: relative;
+  background-color: var(--card-bg);
+  width: 60%;
+  max-width: 600px;
+  min-height: 250px;
+  border-radius: 12px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: var(--card-shadow);
+  border: 1px solid rgba(255,255,255,0.05); /* Subtle inner-edge highlight */
+}
+
+.card-content-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.card-title {
+  font-family: var(--font-digital);
+  font-size: 32px;
+  color: var(--red-accent);
+  text-transform: lowercase;
+  margin: 0;
+  display: flex;
+  gap: 0px;
+  /* Add a soft digital glow */
+  text-shadow: 0 0 8px var(--red-accent);
+}
+
+.card-title .word {
+  /* Default red accent */
+}
+
+.card-title .bars {
+  color: var(--brighter-red-accent);
+  margin-left: 2px; /* Small gap */
+  /* Using 'ii' in a mono font makes them look like bars */
+}
+
+.card-location {
+  font-size: 10px;
+  opacity: 0.7;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin: 0;
+}
+
+.card-location .pin-icon {
+  color: var(--red-accent);
+  font-size: 12px;
+}
+
+.card-footer {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start; /* Place content at the bottom left */
+  align-items: center;
+  font-size: 10px;
+  margin-top: auto; /* Push to bottom of card */
+}
+
+.card-viewers {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.card-viewers .red-dot {
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background-color: var(--red-accent);
+}
+
+.card-viewers .eye-icon {
+  color: var(--red-accent);
+  font-size: 12px;
+}
+
+.card-viewers .viewer-count {
+  font-weight: bold;
+}
