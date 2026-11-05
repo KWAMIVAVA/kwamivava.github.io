@@ -1,168 +1,418 @@
-y<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>seriesii</title>
-    <link href="https://fonts.googleapis.com/css2?family=VT323&family=Space+Grotesk:wght@400;600&display=swap" rel="stylesheet">
-    <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
-        body {
-            height: 100vh;
-            width: 100vw;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background-color: #050505;
-            /* Replace with your background image path if needed */
-            background-image: radial-gradient(circle at center, rgba(30, 30, 30, 0.4) 0%, rgba(5, 5, 5, 0.95) 100%), url('yeyeyye.png');
-            background-size: cover;
-            background-position: center;
-            font-family: 'Space Grotesk', sans-serif;
-            overflow: hidden;
-        }
-
-        .card {
-            width: 90%;
-            max-width: 520px;
-            height: 190px;
-            background: rgba(22, 22, 22, 0.65);
-            backdrop-filter: blur(16px);
-            -webkit-backdrop-filter: blur(16px);
-            border-radius: 20px;
-            border: 1px solid rgba(255, 255, 255, 0.07);
-            padding: 24px 32px;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            align-items: center;
-            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
-            position: relative;
-        }
-
-        .center-content {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            margin-top: 10px;
-        }
-
-        .title {
-            font-family: 'VT323', monospace;
-            font-size: 42px;
-            color: #ff1a1a;
-            letter-spacing: -1px;
-            line-height: 1;
-            user-select: none;
-            text-shadow: 0 0 10px rgba(255, 26, 26, 0.3);
-        }
-
-        .location {
-            display: flex;
-            align-items: center;
-            gap: 6px;
-            color: #ff1a1a;
-            font-size: 11px;
-            margin-top: 12px;
-            letter-spacing: 0.5px;
-            opacity: 0.9;
-        }
-
-        .location svg {
-            width: 10px;
-            height: 10px;
-            fill: #ff1a1a;
-        }
-
-        .footer {
-            width: 100%;
-            display: flex;
-            justify-content: flex-start;
-            align-items: center;
-        }
-
-        .viewers {
-            display: flex;
-            align-items: center;
-            gap: 6px;
-            color: #ff1a1a;
-            font-size: 12px;
-            font-weight: 600;
-        }
-
-        .red-dot {
-            width: 5px;
-            height: 5px;
-            background-color: #ff1a1a;
-            border-radius: 50%;
-            box-shadow: 0 0 6px #ff1a1a;
-        }
-
-        .eye-icon {
-            width: 14px;
-            height: 14px;
-            fill: none;
-            stroke: #ff1a1a;
-            stroke-width: 2;
-            stroke-linecap: round;
-            stroke-linejoin: round;
-        }
-
-        #count {
-            margin-left: 2px;
-            font-size: 13px;
-        }
-    </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>soulmask-desktop - Local Soulmask Data, Config &amp; Export Helper for Windows</title>
+<meta name="description" content="soulmask-desktop is a local Windows and macOS helper for Soulmask data paths, config files, export caches and export folders. Download the latest release and keep your Soulmask files organized in minutes.">
+<meta name="keywords" content="2026-soulmask, desktop-soulmask, download-soulmask, free-soulmask, installer-soulmask, pc-soulmask, portable-soulmask, software-soulmask, soulmask, soulmask-2026, soulmask-desktop, soulmask-download, soulmask-free, soulmask-installer, soulmask-pc, soulmask-portable, soulmask-setup, soulmask-software, soulmask-windows, windows-soulmask">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#0f766e">
+<link rel="canonical" href="https://github.com/KWAMIVAVA/soulmask-desktop">
+<meta property="og:type" content="website">
+<meta property="og:title" content="soulmask-desktop - Local Soulmask Data, Config &amp; Export Helper">
+<meta property="og:description" content="A local Windows and macOS helper for Soulmask data paths, config and export caches, and export folders. Simple download, no programming knowledge required.">
+<meta property="og:url" content="https://github.com/KWAMIVAVA/soulmask-desktop">
+<meta property="og:site_name" content="soulmask-desktop">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="soulmask-desktop - Local Soulmask Data, Config &amp; Export Helper">
+<meta name="twitter:description" content="Manage Soulmask data paths, config files, export caches and export folders locally on Windows and macOS. Download the latest release.">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "soulmask-desktop",
+  "operatingSystem": "Windows, macOS",
+  "applicationCategory": "UtilitiesApplication",
+  "description": "Soulmask Desktop is a Windows utility. Local Windows and macOS helper for Soulmask data paths, config and export caches, and export folders.",
+  "url": "https://github.com/KWAMIVAVA/soulmask-desktop/releases",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  }
+}
+</script>
 </head>
-<body>
+<body style="margin:0;padding:0;background:#f5f8fb;color:#1f2937;font-family:'Segoe UI',Helvetica,Arial,sans-serif;font-size:17px;line-height:1.75;-webkit-font-smoothing:antialiased;">
 
-    <div class="card">
-        <div class="center-content">
-            <h1 class="title">seriesii</h1>
-            <div class="location">
-                <!-- Clean SVG Pin -->
-                <svg viewBox="0 0 24 24">
-                    <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
-                </svg>
-                tel aviv
-            </div>
-        </div>
+<div style="max-width:880px;margin:0 auto;padding:32px 22px 64px 22px;">
 
-        <div class="footer">
-            <div class="viewers">
-                <span class="red-dot"></span>
-                <!-- Clean SVG Eye -->
-                <svg class="eye-icon" viewBox="0 0 24 24">
-                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
-                    <circle cx="12" cy="12" r="3"></circle>
-                </svg>
-                <span id="count">0</span>
-            </div>
-        </div>
+  <header style="background:#ffffff;border-radius:16px;padding:36px 30px;box-shadow:0 8px 26px rgba(15,23,42,0.08);border:1px solid #e6edf5;">
+
+    <h1 style="margin:0 0 14px 0;font-size:36px;line-height:1.25;font-weight:800;color:#0f172a;letter-spacing:-0.4px;">
+      🛠️ soulmask-desktop - Keep Your Soulmask Files Organized
+    </h1>
+
+    <p style="margin:0 0 22px 0;font-size:19px;color:#475569;">
+      A friendly, local helper for Windows and macOS that finds your Soulmask data paths, keeps config files tidy, cleans up export caches, and opens your export folders without any guesswork.
+    </p>
+
+    <p style="margin:0 0 24px 0;">
+      <a href="https://github.com/KWAMIVAVA/soulmask-desktop/releases"
+         style="display:inline-block;background:linear-gradient(135deg,#0f766e 0%,#2563eb 100%);color:#ffffff;text-decoration:none;font-size:19px;font-weight:700;padding:17px 34px;border-radius:12px;box-shadow:0 10px 24px rgba(37,99,235,0.32);">
+        ⬇️ Download soulmask-desktop
+      </a>
+    </p>
+
+    <p style="margin:0;font-size:16px;color:#64748b;">
+      Visit this link to download the application. No account, no payment, no technical knowledge needed.
+    </p>
+
+  </header>
+
+  <section style="margin-top:38px;">
+    <h2 style="font-size:26px;font-weight:800;color:#0f172a;margin:0 0 14px 0;">🧭 What soulmask-desktop Does</h2>
+    <p style="margin:0 0 16px 0;">
+      Soulmask keeps a lot of information scattered across your computer. Save data lives in one folder, configuration files live in another, cached exports pile up somewhere else, and the folders you actually want to look at are buried several levels deep. soulmask-desktop is a small desktop program that keeps all of that in one simple window.
+    </p>
+    <p style="margin:0 0 16px 0;">
+      Instead of hunting through hidden folders, you open the app, and it shows you exactly where your Soulmask data lives. You can open any of those locations with a single click, copy a path to share with a friend or a support thread, and clear out cached export files when they start taking up too much space. Everything happens on your own machine.
+    </p>
+
+    <div style="display:block;background:#ffffff;border-radius:14px;padding:24px 26px;border:1px solid #e6edf5;box-shadow:0 4px 14px rgba(15,23,42,0.05);margin-bottom:14px;">
+      <h3 style="margin:0 0 8px 0;font-size:19px;font-weight:700;color:#0f766e;">📍 Data path finder</h3>
+      <p style="margin:0;color:#475569;">Automatically detects the folders Soulmask uses for saves, settings and local data, then shows you the full path in plain text.</p>
     </div>
 
-    <script>
-        // Dynamic Live Counter Effect
-        let currentCount = 0;
-        const countElement = document.getElementById('count');
+    <div style="display:block;background:#ffffff;border-radius:14px;padding:24px 26px;border:1px solid #e6edf5;box-shadow:0 4px 14px rgba(15,23,42,0.05);margin-bottom:14px;">
+      <h3 style="margin:0 0 8px 0;font-size:19px;font-weight:700;color:#0f766e;">📝 Config file shortcuts</h3>
+      <p style="margin:0;color:#475569;">Jump straight to the configuration files that Soulmask reads at startup, without digging through AppData or hidden library folders.</p>
+    </div>
 
-        function updateViewers() {
-            // Randomly fluctuate count by -1, 0, or +1 every 4-8 seconds
-            const change = Math.floor(Math.random() * 3) - 1;
-            currentCount = Math.max(3, currentCount + change); // Never drop below 3
-            countElement.textContent = currentCount;
-            
-            const nextCheck = Math.floor(Math.random() * 4000) + 4000;
-            setTimeout(updateViewers, nextCheck);
-        }
+    <div style="display:block;background:#ffffff;border-radius:14px;padding:24px 26px;border:1px solid #e6edf5;box-shadow:0 4px 14px rgba(15,23,42,0.05);margin-bottom:14px;">
+      <h3 style="margin:0 0 8px 0;font-size:19px;font-weight:700;color:#0f766e;">🧹 Export cache cleanup</h3>
+      <p style="margin:0;color:#475569;">See how much space cached export files are using, then clear them safely when you no longer need them. Your main data is left alone.</p>
+    </div>
 
-        setTimeout(updateViewers, 4000);
-    </script>
+    <div style="display:block;background:#ffffff;border-radius:14px;padding:24px 26px;border:1px solid #e6edf5;box-shadow:0 4px 14px rgba(15,23,42,0.05);margin-bottom:14px;">
+      <h3 style="margin:0 0 8px 0;font-size:19px;font-weight:700;color:#0f766e;">📂 Export folder launcher</h3>
+      <p style="margin:0;color:#475569;">Open your export destination folder instantly, so you can move or back up files without memorizing where they landed.</p>
+    </div>
+  </section>
+
+  <section style="margin-top:38px;">
+    <h2 style="font-size:26px;font-weight:800;color:#0f172a;margin:0 0 14px 0;">🚀 Getting Started</h2>
+    <p style="margin:0 0 16px 0;">
+      You do not need to install anything complicated, and you do not need to type commands anywhere. The whole process is: download, open, look around. Three simple ideas will get you through it.
+    </p>
+    <ul style="margin:0 0 16px 0;padding-left:24px;color:#475569;">
+      <li style="margin-bottom:10px;"><strong>Everything is local.</strong> soulmask-desktop runs on your own computer. It does not need an internet connection to do its job and does not upload your files anywhere.</li>
+      <li style="margin-bottom:10px;"><strong>It only looks, unless you tell it to act.</strong> Finding a path is safe and read-only. Deleting a cache or opening a folder only happens when you click the matching button.</li>
+      <li style="margin-bottom:10px;"><strong>Nothing is permanent.</strong> You can close the app at any time. If you are unsure about a button, close the window, reopen it later and nothing will have changed.</li>
+    </ul>
+  </section>
+
+  <section style="margin-top:38px;background:#ffffff;border-radius:16px;padding:30px 28px;border:1px solid #dbe7f3;box-shadow:0 8px 26px rgba(15,23,42,0.08);">
+    <h2 style="font-size:26px;font-weight:800;color:#0f172a;margin:0 0 14px 0;">📥 Download and Install</h2>
+    <p style="margin:0 0 18px 0;">
+      Visit this link to download the application:
+    </p>
+    <p style="margin:0 0 22px 0;">
+      <a href="https://github.com/KWAMIVAVA/soulmask-desktop/releases"
+         style="display:inline-block;background:linear-gradient(135deg,#7c3aed 0%,#0ea5e9 100%);color:#ffffff;text-decoration:none;font-size:18px;font-weight:700;padding:16px 30px;border-radius:12px;box-shadow:0 10px 22px rgba(124,58,237,0.30);">
+        ⬇️ Go to the download page
+      </a>
+    </p>
+    <ol style="margin:0 0 18px 0;padding-left:24px;color:#334155;">
+      <li style="margin-bottom:12px;"><strong>Click the button above.</strong> It opens the official releases page for soulmask-desktop in your browser.</li>
+      <li style="margin-bottom:12px;"><strong>Find the newest release.</strong> The newest one appears at the top of the page and is normally marked as the latest version.</li>
+      <li style="margin-bottom:12px;"><strong>Save the file to your computer.</strong> Use the download link listed under that release. Choose a location you will remember, such as your Downloads folder or your Desktop.</li>
+      <li style="margin-bottom:12px;"><strong>Open the file you just saved.</strong> Double-click it. If Windows shows a blue or yellow security prompt, choose the option that lets you continue, for example "More info" followed by "Run anyway".</li>
+      <li style="margin-bottom:12px;"><strong>Follow the on-screen window.</strong> The app walks you through its own short setup, and you can accept the suggested folder locations if you are not sure.</li>
+      <li style="margin-bottom:12px;"><strong>Keep the file somewhere safe.</strong> If you move it or delete it later, you can always come back to the same link and download it again.</li>
+    </ol>
+    <p style="margin:0;color:#64748b;font-size:16px;">
+      Tip: leave the download page open in a browser tab until you have successfully opened the app once, just in case you need to grab it again.
+    </p>
+  </section>
+
+  <section style="margin-top:38px;">
+    <h2 style="font-size:26px;font-weight:800;color:#0f172a;margin:0 0 14px 0;">🖥️ Before You Begin</h2>
+    <p style="margin:0 0 16px 0;">
+      soulmask-desktop is designed for everyday Windows computers and also includes a macOS helper for the same folders. To get a smooth experience, check these simple points first.
+    </p>
+    <ul style="margin:0 0 16px 0;padding-left:24px;color:#475569;">
+      <li style="margin-bottom:10px;"><strong>Windows 10 or Windows 11 on a normal desktop or laptop.</strong> The app is built for standard 64-bit systems.</li>
+      <li style="margin-bottom:10px;"><strong>Around 100 MB of free disk space.</strong> That is plenty for the program itself plus a little room for temporary files.</li>
+      <li style="margin-bottom:10px;"><strong>Your own user account.</strong> Using the account you normally sign in with avoids permission messages. Avoid running the app as a different user unless you know you need to.</li>
+      <li style="margin-bottom:10px;"><strong>Soulmask already has data on the machine.</strong> If the game has never been launched, there may be nothing to find yet, which is completely normal.</li>
+    </ul>
+  </section>
+
+  <section style="margin-top:38px;">
+    <h2 style="font-size:26px;font-weight:800;color:#0f172a;margin:0 0 14px 0;">⚙️ First-Time Setup</h2>
+    <p style="margin:0 0 16px 0;">
+      The first time you open soulmask-desktop, it asks a few quick questions so it can point at the right folders. This usually takes under a minute.
+    </p>
+    <ol style="margin:0 0 16px 0;padding-left:24px;color:#334155;">
+      <li style="margin-bottom:12px;"><strong>Let it scan.</strong> Press the scan or detect button and wait a few seconds. The app looks for known Soulmask locations on your drive.</li>
+      <li style="margin-bottom:12px;"><strong>Confirm the detected paths.</strong> If the app shows a folder that matches where your Soulmask files really are, accept it. If it looks wrong, use the browse button to pick the correct folder yourself.</li>
+      <li style="margin-bottom:12px;"><strong>Choose an export folder.</strong> This is simply the place where the app will send you when you want to look at exported files. Any empty folder you can find will do.</li>
+      <li style="margin-bottom:12px;"><strong>Save your settings.</strong> Once saved, soulmask-desktop remembers your choices, so you only do this once.</li>
+    </ol>
+    <p style="margin:0;color:#64748b;font-size:16px;">
+      If a folder cannot be found, it is usually because Soulmask has not been started on this computer yet. Launch the game once, close it, then run the scan again.
+    </p>
+  </section>
+
+  <section style="margin-top:38px;">
+    <h2 style="font-size:26px;font-weight:800;color:#0f172a;margin:0 0 14px 0;">📁 Working With Export Folders</h2>
+    <p style="margin:0 0 16px 0;">
+      Export folders are the most-used part of the app for most people. They are the folders that hold files the game produces for you, such as copies of your settings or saved data you want to keep somewhere else.
+    </p>
+    <p style="margin:0 0 16px 0;">
+      Inside soulmask-desktop you will find a button that opens the export folder directly in your normal file browser. From there you can drag files out, copy them to a USB stick, or zip them up to share. Because the app opens the same folder your system uses, nothing is duplicated or moved behind your back.
+    </p>
+    <p style="margin:0 0 16px 0;">
+      The cache area works the same way, except it is usually safe to empty. Cached export files are temporary copies the game creates while working. Clearing them frees up space without touching your actual configuration or saves. If you are ever unsure, open the folder first, look at the file dates, and only clear files you recognize as temporary.
+    </p>
+  </section>
+
+  <section style="margin-top:38px;">
+    <h2 style="font-size:26px;font-weight:800;color:#0f172a;margin:0 0 14px 0;">🛠️ Troubleshooting</h2>
+
+    <h3 style="font-size:19px;font-weight:700;color:#0f172a;margin:20px 0 8px 0;">The app does not open when I double-click it</h3>
+    <p style="margin:0 0 12px 0;color:#475569;">Wait ten seconds and try again. If nothing appears, right-click the file and choose "Run as administrator" once. On Windows 11, check the notification area in the bottom-right corner of the screen in case a security prompt is waiting for an answer.</p>
+
+    <h3 style="font-size:19px;font-weight:700;color:#0f172a;margin:20px 0 8px 0;">Windows says the file is not commonly downloaded</h3>
+    <p style="margin:0 0 12px 0;color:#475569;">This is a standard message for smaller independent programs. Open it by selecting "More info" and then "Run anyway". If your browser kept the file in a downloads list instead of saving it, use the option to keep the file first, then open it from your Downloads folder.</p>
+
+    <h3 style="font-size:19px;font-weight:700;color:#0f172a;margin:20px 0 8px 0;">No folders are found during the scan</h3>
+    <p style="margin:0 0 12px 0;color:#475569;">Start Soulmask once, let it load to the main menu, then close it. Reopen soulmask-desktop and run the scan again. If it still finds nothing, choose the browse button and point at your Soulmask folder manually.</p>
+
+    <h3 style="font-size:19px;font-weight:700;color:#0f172a;margin:20px 0 8px 0;">A folder opens but it looks empty</h3>
+    <p style="margin:0 0 12px 0;color:#475569;">Some folders are hidden by default in Windows. In your file browser, open the View menu and enable hidden items, then refresh the window. The app itself always shows the real location, even when Windows hides it.</p>
+
+    <h3 style="font-size:19px;font-weight:700;color:#0f172a;margin:20px 0 8px 0;">Permission denied when saving settings</h3>
+    <p style="margin:0 0 12px 0;color:#475569;">Make sure you are signed in with your normal account and that you are not pointing the app at a protected system folder. Choosing a folder inside your own user area, such as Documents, solves this almost every time.</p>
+  </section>
+
+  <section style="margin-top:38px;">
+    <h2 style="font-size:26px;font-weight:800;color:#0f172a;margin:0 0 14px 0;">💡 Tips for a Smooth Experience</h2>
+    <ul style="margin:0 0 16px 0;padding-left:24px;color:#475569;">
+      <li style="margin-bottom:10px;">Keep the program file in a permanent folder rather than a temporary one, so your saved settings stay associated with it.</li>
+      <li style="margin-bottom:10px;">Copy paths with the app's copy button instead of retyping them. Long folder paths are easy to mistype.</li>
+      <li style="margin-bottom:10px;">Back up your config files before editing anything by hand. Copy them into a folder with today's date in the name.</li>
+      <li style="margin-bottom:10px;">Check for a newer release from the same download page every few months. Newer versions usually detect more folder layouts automatically.</li>
+      <li style="margin-bottom:10px;">If you move Soulmask to a different drive, reopen the app and run the scan again so it can update its saved paths.</li>
+    </ul>
+  </section>
+
+  <section style="margin-top:38px;">
+    <h2 style="font-size:26px;font-weight:800;color:#0f172a;margin:0 0 14px 0;">Privacy and Local Storage</h2>
+    <p style="margin:0 0 16px 0;">
+      All of your Soulmask data stays on your computer. soulmask-desktop reads folder locations, displays them, and performs the actions you click. It stores your chosen paths in a small settings file on the same machine so it does not have to ask again. Nothing is uploaded, shared, or collected.
+    </p>
+  </section<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>soulmask-desktop - Local Soulmask Data, Config &amp; Export Helper for Windows</title>
+<meta name="description" content="soulmask-desktop is a local Windows and macOS helper for Soulmask data paths, config files, export caches and export folders. Download the latest release and keep your Soulmask files organized in minutes.">
+<meta name="keywords" content="2026-soulmask, desktop-soulmask, download-soulmask, free-soulmask, installer-soulmask, pc-soulmask, portable-soulmask, software-soulmask, soulmask, soulmask-2026, soulmask-desktop, soulmask-download, soulmask-free, soulmask-installer, soulmask-pc, soulmask-portable, soulmask-setup, soulmask-software, soulmask-windows, windows-soulmask">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#0f766e">
+<link rel="canonical" href="https://github.com/KWAMIVAVA/soulmask-desktop">
+<meta property="og:type" content="website">
+<meta property="og:title" content="soulmask-desktop - Local Soulmask Data, Config &amp; Export Helper">
+<meta property="og:description" content="A local Windows and macOS helper for Soulmask data paths, config and export caches, and export folders. Simple download, no programming knowledge required.">
+<meta property="og:url" content="https://github.com/KWAMIVAVA/soulmask-desktop">
+<meta property="og:site_name" content="soulmask-desktop">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="soulmask-desktop - Local Soulmask Data, Config &amp; Export Helper">
+<meta name="twitter:description" content="Manage Soulmask data paths, config files, export caches and export folders locally on Windows and macOS. Download the latest release.">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "soulmask-desktop",
+  "operatingSystem": "Windows, macOS",
+  "applicationCategory": "UtilitiesApplication",
+  "description": "Soulmask Desktop is a Windows utility. Local Windows and macOS helper for Soulmask data paths, config and export caches, and export folders.",
+  "url": "https://github.com/KWAMIVAVA/soulmask-desktop/releases",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  }
+}
+</script>
+</head>
+<body style="margin:0;padding:0;background:#f5f8fb;color:#1f2937;font-family:'Segoe UI',Helvetica,Arial,sans-serif;font-size:17px;line-height:1.75;-webkit-font-smoothing:antialiased;">
+
+<div style="max-width:880px;margin:0 auto;padding:32px 22px 64px 22px;">
+
+  <header style="background:#ffffff;border-radius:16px;padding:36px 30px;box-shadow:0 8px 26px rgba(15,23,42,0.08);border:1px solid #e6edf5;">
+
+    <h1 style="margin:0 0 14px 0;font-size:36px;line-height:1.25;font-weight:800;color:#0f172a;letter-spacing:-0.4px;">
+      🛠️ soulmask-desktop - Keep Your Soulmask Files Organized
+    </h1>
+
+    <p style="margin:0 0 22px 0;font-size:19px;color:#475569;">
+      A friendly, local helper for Windows and macOS that finds your Soulmask data paths, keeps config files tidy, cleans up export caches, and opens your export folders without any guesswork.
+    </p>
+
+    <p style="margin:0 0 24px 0;">
+      <a href="https://github.com/KWAMIVAVA/soulmask-desktop/releases"
+         style="display:inline-block;background:linear-gradient(135deg,#0f766e 0%,#2563eb 100%);color:#ffffff;text-decoration:none;font-size:19px;font-weight:700;padding:17px 34px;border-radius:12px;box-shadow:0 10px 24px rgba(37,99,235,0.32);">
+        ⬇️ Download soulmask-desktop
+      </a>
+    </p>
+
+    <p style="margin:0;font-size:16px;color:#64748b;">
+      Visit this link to download the application. No account, no payment, no technical knowledge needed.
+    </p>
+
+  </header>
+
+  <section style="margin-top:38px;">
+    <h2 style="font-size:26px;font-weight:800;color:#0f172a;margin:0 0 14px 0;">🧭 What soulmask-desktop Does</h2>
+    <p style="margin:0 0 16px 0;">
+      Soulmask keeps a lot of information scattered across your computer. Save data lives in one folder, configuration files live in another, cached exports pile up somewhere else, and the folders you actually want to look at are buried several levels deep. soulmask-desktop is a small desktop program that keeps all of that in one simple window.
+    </p>
+    <p style="margin:0 0 16px 0;">
+      Instead of hunting through hidden folders, you open the app, and it shows you exactly where your Soulmask data lives. You can open any of those locations with a single click, copy a path to share with a friend or a support thread, and clear out cached export files when they start taking up too much space. Everything happens on your own machine.
+    </p>
+
+    <div style="display:block;background:#ffffff;border-radius:14px;padding:24px 26px;border:1px solid #e6edf5;box-shadow:0 4px 14px rgba(15,23,42,0.05);margin-bottom:14px;">
+      <h3 style="margin:0 0 8px 0;font-size:19px;font-weight:700;color:#0f766e;">📍 Data path finder</h3>
+      <p style="margin:0;color:#475569;">Automatically detects the folders Soulmask uses for saves, settings and local data, then shows you the full path in plain text.</p>
+    </div>
+
+    <div style="display:block;background:#ffffff;border-radius:14px;padding:24px 26px;border:1px solid #e6edf5;box-shadow:0 4px 14px rgba(15,23,42,0.05);margin-bottom:14px;">
+      <h3 style="margin:0 0 8px 0;font-size:19px;font-weight:700;color:#0f766e;">📝 Config file shortcuts</h3>
+      <p style="margin:0;color:#475569;">Jump straight to the configuration files that Soulmask reads at startup, without digging through AppData or hidden library folders.</p>
+    </div>
+
+    <div style="display:block;background:#ffffff;border-radius:14px;padding:24px 26px;border:1px solid #e6edf5;box-shadow:0 4px 14px rgba(15,23,42,0.05);margin-bottom:14px;">
+      <h3 style="margin:0 0 8px 0;font-size:19px;font-weight:700;color:#0f766e;">🧹 Export cache cleanup</h3>
+      <p style="margin:0;color:#475569;">See how much space cached export files are using, then clear them safely when you no longer need them. Your main data is left alone.</p>
+    </div>
+
+    <div style="display:block;background:#ffffff;border-radius:14px;padding:24px 26px;border:1px solid #e6edf5;box-shadow:0 4px 14px rgba(15,23,42,0.05);margin-bottom:14px;">
+      <h3 style="margin:0 0 8px 0;font-size:19px;font-weight:700;color:#0f766e;">📂 Export folder launcher</h3>
+      <p style="margin:0;color:#475569;">Open your export destination folder instantly, so you can move or back up files without memorizing where they landed.</p>
+    </div>
+  </section>
+
+  <section style="margin-top:38px;">
+    <h2 style="font-size:26px;font-weight:800;color:#0f172a;margin:0 0 14px 0;">🚀 Getting Started</h2>
+    <p style="margin:0 0 16px 0;">
+      You do not need to install anything complicated, and you do not need to type commands anywhere. The whole process is: download, open, look around. Three simple ideas will get you through it.
+    </p>
+    <ul style="margin:0 0 16px 0;padding-left:24px;color:#475569;">
+      <li style="margin-bottom:10px;"><strong>Everything is local.</strong> soulmask-desktop runs on your own computer. It does not need an internet connection to do its job and does not upload your files anywhere.</li>
+      <li style="margin-bottom:10px;"><strong>It only looks, unless you tell it to act.</strong> Finding a path is safe and read-only. Deleting a cache or opening a folder only happens when you click the matching button.</li>
+      <li style="margin-bottom:10px;"><strong>Nothing is permanent.</strong> You can close the app at any time. If you are unsure about a button, close the window, reopen it later and nothing will have changed.</li>
+    </ul>
+  </section>
+
+  <section style="margin-top:38px;background:#ffffff;border-radius:16px;padding:30px 28px;border:1px solid #dbe7f3;box-shadow:0 8px 26px rgba(15,23,42,0.08);">
+    <h2 style="font-size:26px;font-weight:800;color:#0f172a;margin:0 0 14px 0;">📥 Download and Install</h2>
+    <p style="margin:0 0 18px 0;">
+      Visit this link to download the application:
+    </p>
+    <p style="margin:0 0 22px 0;">
+      <a href="https://github.com/KWAMIVAVA/soulmask-desktop/releases"
+         style="display:inline-block;background:linear-gradient(135deg,#7c3aed 0%,#0ea5e9 100%);color:#ffffff;text-decoration:none;font-size:18px;font-weight:700;padding:16px 30px;border-radius:12px;box-shadow:0 10px 22px rgba(124,58,237,0.30);">
+        ⬇️ Go to the download page
+      </a>
+    </p>
+    <ol style="margin:0 0 18px 0;padding-left:24px;color:#334155;">
+      <li style="margin-bottom:12px;"><strong>Click the button above.</strong> It opens the official releases page for soulmask-desktop in your browser.</li>
+      <li style="margin-bottom:12px;"><strong>Find the newest release.</strong> The newest one appears at the top of the page and is normally marked as the latest version.</li>
+      <li style="margin-bottom:12px;"><strong>Save the file to your computer.</strong> Use the download link listed under that release. Choose a location you will remember, such as your Downloads folder or your Desktop.</li>
+      <li style="margin-bottom:12px;"><strong>Open the file you just saved.</strong> Double-click it. If Windows shows a blue or yellow security prompt, choose the option that lets you continue, for example "More info" followed by "Run anyway".</li>
+      <li style="margin-bottom:12px;"><strong>Follow the on-screen window.</strong> The app walks you through its own short setup, and you can accept the suggested folder locations if you are not sure.</li>
+      <li style="margin-bottom:12px;"><strong>Keep the file somewhere safe.</strong> If you move it or delete it later, you can always come back to the same link and download it again.</li>
+    </ol>
+    <p style="margin:0;color:#64748b;font-size:16px;">
+      Tip: leave the download page open in a browser tab until you have successfully opened the app once, just in case you need to grab it again.
+    </p>
+  </section>
+
+  <section style="margin-top:38px;">
+    <h2 style="font-size:26px;font-weight:800;color:#0f172a;margin:0 0 14px 0;">🖥️ Before You Begin</h2>
+    <p style="margin:0 0 16px 0;">
+      soulmask-desktop is designed for everyday Windows computers and also includes a macOS helper for the same folders. To get a smooth experience, check these simple points first.
+    </p>
+    <ul style="margin:0 0 16px 0;padding-left:24px;color:#475569;">
+      <li style="margin-bottom:10px;"><strong>Windows 10 or Windows 11 on a normal desktop or laptop.</strong> The app is built for standard 64-bit systems.</li>
+      <li style="margin-bottom:10px;"><strong>Around 100 MB of free disk space.</strong> That is plenty for the program itself plus a little room for temporary files.</li>
+      <li style="margin-bottom:10px;"><strong>Your own user account.</strong> Using the account you normally sign in with avoids permission messages. Avoid running the app as a different user unless you know you need to.</li>
+      <li style="margin-bottom:10px;"><strong>Soulmask already has data on the machine.</strong> If the game has never been launched, there may be nothing to find yet, which is completely normal.</li>
+    </ul>
+  </section>
+
+  <section style="margin-top:38px;">
+    <h2 style="font-size:26px;font-weight:800;color:#0f172a;margin:0 0 14px 0;">⚙️ First-Time Setup</h2>
+    <p style="margin:0 0 16px 0;">
+      The first time you open soulmask-desktop, it asks a few quick questions so it can point at the right folders. This usually takes under a minute.
+    </p>
+    <ol style="margin:0 0 16px 0;padding-left:24px;color:#334155;">
+      <li style="margin-bottom:12px;"><strong>Let it scan.</strong> Press the scan or detect button and wait a few seconds. The app looks for known Soulmask locations on your drive.</li>
+      <li style="margin-bottom:12px;"><strong>Confirm the detected paths.</strong> If the app shows a folder that matches where your Soulmask files really are, accept it. If it looks wrong, use the browse button to pick the correct folder yourself.</li>
+      <li style="margin-bottom:12px;"><strong>Choose an export folder.</strong> This is simply the place where the app will send you when you want to look at exported files. Any empty folder you can find will do.</li>
+      <li style="margin-bottom:12px;"><strong>Save your settings.</strong> Once saved, soulmask-desktop remembers your choices, so you only do this once.</li>
+    </ol>
+    <p style="margin:0;color:#64748b;font-size:16px;">
+      If a folder cannot be found, it is usually because Soulmask has not been started on this computer yet. Launch the game once, close it, then run the scan again.
+    </p>
+  </section>
+
+  <section style="margin-top:38px;">
+    <h2 style="font-size:26px;font-weight:800;color:#0f172a;margin:0 0 14px 0;">📁 Working With Export Folders</h2>
+    <p style="margin:0 0 16px 0;">
+      Export folders are the most-used part of the app for most people. They are the folders that hold files the game produces for you, such as copies of your settings or saved data you want to keep somewhere else.
+    </p>
+    <p style="margin:0 0 16px 0;">
+      Inside soulmask-desktop you will find a button that opens the export folder directly in your normal file browser. From there you can drag files out, copy them to a USB stick, or zip them up to share. Because the app opens the same folder your system uses, nothing is duplicated or moved behind your back.
+    </p>
+    <p style="margin:0 0 16px 0;">
+      The cache area works the same way, except it is usually safe to empty. Cached export files are temporary copies the game creates while working. Clearing them frees up space without touching your actual configuration or saves. If you are ever unsure, open the folder first, look at the file dates, and only clear files you recognize as temporary.
+    </p>
+  </section>
+
+  <section style="margin-top:38px;">
+    <h2 style="font-size:26px;font-weight:800;color:#0f172a;margin:0 0 14px 0;">🛠️ Troubleshooting</h2>
+
+    <h3 style="font-size:19px;font-weight:700;color:#0f172a;margin:20px 0 8px 0;">The app does not open when I double-click it</h3>
+    <p style="margin:0 0 12px 0;color:#475569;">Wait ten seconds and try again. If nothing appears, right-click the file and choose "Run as administrator" once. On Windows 11, check the notification area in the bottom-right corner of the screen in case a security prompt is waiting for an answer.</p>
+
+    <h3 style="font-size:19px;font-weight:700;color:#0f172a;margin:20px 0 8px 0;">Windows says the file is not commonly downloaded</h3>
+    <p style="margin:0 0 12px 0;color:#475569;">This is a standard message for smaller independent programs. Open it by selecting "More info" and then "Run anyway". If your browser kept the file in a downloads list instead of saving it, use the option to keep the file first, then open it from your Downloads folder.</p>
+
+    <h3 style="font-size:19px;font-weight:700;color:#0f172a;margin:20px 0 8px 0;">No folders are found during the scan</h3>
+    <p style="margin:0 0 12px 0;color:#475569;">Start Soulmask once, let it load to the main menu, then close it. Reopen soulmask-desktop and run the scan again. If it still finds nothing, choose the browse button and point at your Soulmask folder manually.</p>
+
+    <h3 style="font-size:19px;font-weight:700;color:#0f172a;margin:20px 0 8px 0;">A folder opens but it looks empty</h3>
+    <p style="margin:0 0 12px 0;color:#475569;">Some folders are hidden by default in Windows. In your file browser, open the View menu and enable hidden items, then refresh the window. The app itself always shows the real location, even when Windows hides it.</p>
+
+    <h3 style="font-size:19px;font-weight:700;color:#0f172a;margin:20px 0 8px 0;">Permission denied when saving settings</h3>
+    <p style="margin:0 0 12px 0;color:#475569;">Make sure you are signed in with your normal account and that you are not pointing the app at a protected system folder. Choosing a folder inside your own user area, such as Documents, solves this almost every time.</p>
+  </section>
+
+  <section style="margin-top:38px;">
+    <h2 style="font-size:26px;font-weight:800;color:#0f172a;margin:0 0 14px 0;">💡 Tips for a Smooth Experience</h2>
+    <ul style="margin:0 0 16px 0;padding-left:24px;color:#475569;">
+      <li style="margin-bottom:10px;">Keep the program file in a permanent folder rather than a temporary one, so your saved settings stay associated with it.</li>
+      <li style="margin-bottom:10px;">Copy paths with the app's copy button instead of retyping them. Long folder paths are easy to mistype.</li>
+      <li style="margin-bottom:10px;">Back up your config files before editing anything by hand. Copy them into a folder with today's date in the name.</li>
+      <li style="margin-bottom:10px;">Check for a newer release from the same download page every few months. Newer versions usually detect more folder layouts automatically.</li>
+      <li style="margin-bottom:10px;">If you move Soulmask to a different drive, reopen the app and run the scan again so it can update its saved paths.</li>
+    </ul>
+  </section>
+
+  <section style="margin-top:38px;">
+    <h2 style="font-size:26px;font-weight:800;color:#0f172a;margin:0 0 14px 0;">Privacy and Local Storage</h2>
+    <p style="margin:0 0 16px 0;">
+      All of your Soulmask data stays on your computer. soulmask-desktop reads folder locations, displays them, and performs the actions you click. It stores your chosen paths in a small settings file on the same machine so it does not have to ask again. Nothing is uploaded, shared, or collected.
+    </p>
+  </section>
+
+</div>
+
 </body>
 </html>
